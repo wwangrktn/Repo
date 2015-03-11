@@ -1,4 +1,54 @@
 {
   "type": "kendo-ui-mobile",
-  "isNew": true
+  "name": "Kendo UI Mobile App",
+  "navigation": "drawer",
+  "views": [
+    {
+      "type": "view",
+      "name": "signInView",
+      "title": "SignIn",
+      "addToNavigation": true,
+      "icon": "\\E0E4",
+      "components": [
+        {
+          "type": "signin",
+          "name": "signInViewSignInViewSignin",
+          "navigateToSignup": false,
+          "signinRedirect": "dataListView",
+          "dataProvider": "backEndDataProvider"
+        }
+      ]
+    },
+    {
+      "type": "view",
+      "name": "dataListView",
+      "title": "DataList",
+      "addToNavigation": true,
+      "icon": "\\E077",
+      "components": [
+        {
+          "type": "list",
+          "name": "dataListViewList",
+          "dataProvider": "backEndDataProvider",
+          "collection": "Activities",
+          "masterDetails": true,
+          "iconField": true,
+          "headerField": "Activities",
+          "pullToRefresh": true,
+          "endlessScroll": true
+        }
+      ]
+    }
+  ],
+  "view": "signInView",
+  "skin": "native",
+  "dataProviders": [
+    {
+      "type": "dataProvider",
+      "name": "backEndDataProvider",
+      "title": "App created with Screen Builder / BackEndDataProvider",
+      "source": "everlive",
+      "everliveKey": "ywLuNKfN9ByXXZXI"
+    }
+  ]
 }
